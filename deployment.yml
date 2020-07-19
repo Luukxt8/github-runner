@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: github-runner
-        image: denetwerkman/github-runner:rpi4
+        image: github-runner:latest
         env:
         - name: GITHUB_OWNER
           value: Luukxt8
