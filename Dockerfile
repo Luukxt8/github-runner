@@ -24,7 +24,7 @@ RUN apt-get update \
 USER github
 WORKDIR /home/github
 
-RUN curl -Ls https://github.com/actions/runner/releases/download/v${GITHUB_RUNNER_VERSION}/actions-runner-linux-arm-${GITHUB_RUNNER_VERSION}.tar.gz | tar xz \
+RUN curl -Ls https://github.com/actions/runner/releases/download/v2.267.1/actions-runner-linux-arm-2.267.1.tar.gz | tar xz \
     && sudo ./bin/installdependencies.sh
 
 COPY --chown=github:github entrypoint.sh ./entrypoint.sh
