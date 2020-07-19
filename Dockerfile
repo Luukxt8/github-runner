@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM armv7/debian:buster-slim
 
 ARG GITHUB_RUNNER_VERSION="2.267.1"
 
