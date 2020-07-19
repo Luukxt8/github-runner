@@ -16,14 +16,21 @@ spec:
     spec:
       containers:
       - name: github-runner
-        image: sanderknape/github-runner:latest
+        image: denetwerkman/github-runner:rpi4
         env:
         - name: GITHUB_OWNER
-          value: your-organization
+          value: Luukxt8
         - name: GITHUB_REPOSITORY
-          value: your-repository
+          value: github-runner
         - name: RUNNER_TOKEN # stored separately in a Kubernetes secret
           valueFrom:
             secretKeyRef:
-              name: my-secret
+              name: github-pat
               key: pat
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "500Mi"
+            cpu: "500m"
