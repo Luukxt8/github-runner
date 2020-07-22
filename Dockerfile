@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM alpine:3.10
 
 ARG GITHUB_RUNNER_VERSION="2.267.1"
 
