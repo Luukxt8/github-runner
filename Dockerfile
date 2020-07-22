@@ -9,8 +9,6 @@ ENV GITHUB_REPOSITORY ""
 ENV RUNNER_WORKDIR "_work"
 ENV RUNNER_LABELS "self-hosted"
 
-RUN dpkg --print-architecture
-
 RUN apt-get update \
     && apt-get install -y \
         curl \
